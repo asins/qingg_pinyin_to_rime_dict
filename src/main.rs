@@ -1,9 +1,9 @@
-use once_cell::sync::Lazy;
 use std::collections::HashSet;
 use std::fs::File;
 use std::io::{BufRead, BufReader, BufWriter, Write};
+use std::sync::LazyLock;
 
-static VALID_PINYINS: Lazy<HashSet<&'static str>> = Lazy::new(|| {
+static VALID_PINYINS: LazyLock<HashSet<&'static str>> = LazyLock::new(|| {
     let mut set = HashSet::with_capacity(420);
     // 基础单韵母（6个）
     set.extend(["a", "o", "e", "i", "u", "v"]);
