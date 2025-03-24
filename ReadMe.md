@@ -9,7 +9,7 @@ bian 扁
 yuanchengdenglu 远程登陆 远程登录
 ```
 
-而Rime输入法的词库格式为 `词语\t用空格分隔的汉字拼音\t词频`  
+而Rime输入法的词库格式为 `词语\t用空格分隔的汉字拼音\t词频`
 如：
 ```yaml
 ---
@@ -18,7 +18,7 @@ version: "0.1"
 sort: by_weight
 ...
 阿巴斯	a ba si	0
-扁	bian	0 
+扁	bian	0
 远程登陆 yuan cheng deng lu	1
 远程登录 yuan cheng deng lu	0
 ```
@@ -28,3 +28,8 @@ sort: by_weight
 ## 构建生成
 
 执行Cargo run命令，会在当前目录下生成名为`pinyin_simp.dict.yaml`的文件。
+
+## TODO
+
+- 后面有时间了来支持下`https://github.com/mozillazg/phrase-pinyin-data.git`仓库中的`large_pinyin.txt`字典的转换
+- 汉字转拼音工具，支持多音词：https://github.com/duguying/pinyin-translator
